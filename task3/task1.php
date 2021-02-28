@@ -1,0 +1,73 @@
+<?php
+require_once 'php/handler.php';
+?>
+<!Doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="nav__logo">
+                <img src="images/Union.png">
+                <p>pineapple.</p>
+            </div>
+            <div class="nav__menu">
+                <div class="nav__link">
+                    <a href="#">
+                        About
+                    </a>
+                </div>
+                <div class="nav__link">
+                    <a href="#">
+                        How it works
+                    </a>
+                </div>
+                <div class="nav__link">
+                    <a href="#">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="container__title">Subscribe to newsletter</div>
+                <div class="container__subtitle">Subscribe to our newsletter and get 10% discount on pineapple glasses.
+                </div>
+                <div class="container__form">
+                    <form name="email" method="post" id="form_id">
+                        <div tabindex="0" class="container__input">
+                            <div class="container__text">
+                                <input type="text" placeholder="Type your email address here…" name="email" id="email">
+                            </div>
+                            <div class="container__submit">
+                                <input type="image" name="submit" src="images/ic_arrow.png" id="submit" alt="Submit" />
+                            </div>
+                        </div>
+                        <div id="result"><?=$valid->validate_form($email);?></div>
+                        <div class="container__checkbox">
+                            <input type="checkbox" id="agreement" name="agreement" value="agreement" class="agreement">
+                            <label for="agreement" class="text">I agree to&nbsp<a href="#">terms of service</a></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="container__line"></div>
+                <div class="container__social">
+                    <div class="container__facebook"></div>
+                    <div class="container__instagram"></div>
+                    <div class="container__twitter"></div>
+                    <div class="container__youtube"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

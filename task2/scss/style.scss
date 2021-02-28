@@ -1,0 +1,124 @@
+@import "_reset";
+@import "_variables";
+@import "_container";
+@import "_social";
+@import "../mixins/_media_mixins";
+
+.nav {
+    background-color: $background1;
+    height: (66px / 812px) * 100%;
+    width: 100%;
+    display: flex;
+    @include _375 {
+        width: (680/1920) * 100%;
+        height: (240/1080) * 100%;
+    }
+    &__logo {
+        margin-left: (20px/375px) * 100%;
+        @include _375 {
+            height: 40px;
+            width: 118px;
+            margin-left: 100px;
+            margin-top: 100px;
+            @include _850 {
+                margin-left: 40px;
+                margin-top: 40px;
+            }
+        }
+        img {
+            margin-top: (25px/66px) * 100%;
+            @include _375 {
+                margin-top: 0px;
+            }
+        }
+        p {
+            display: none;
+            @include _375 {
+                display: block;
+                width: 78px;
+                font-size: 135%;
+                float: right;
+                margin-top: 0.75em;
+            }
+            @include _1280 {
+                display: none;
+            }
+            @include _1000 {
+                display: none;
+            }
+            @include _850 {
+                display: none;
+            }
+        }
+    }
+    &__menu {
+        display: flex;
+        width: (206px/375px) * 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: (104px/375px) * 100%;
+        @include _375 {
+            width: (249/680) * 100%;
+            margin-left: (113/680) * 100%;
+            margin-top: 114px;
+            height: 26px;
+            @include _1280 {
+                margin-left: (20/680) * 100%;
+                width: (300/680) * 100%;
+            }
+            @include _1000 {
+                margin-left: 0px;
+                width: (300/680) * 100%;
+                margin-right: 2%;
+            }
+            @include _850 {
+                margin-top: 50px;
+                width: (1500/680) * 100%;
+                margin-right: 5%;
+            }
+        }
+    }
+    &__link {
+        a {
+            font-family: Arial;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 24px;
+            color: $color1;
+            @include _375 {
+                font-size: 16px;
+                line-height: 26px;
+                @include _1000 {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+                @include _850 {
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+.main {
+    height: 100%;
+    @include _375 {
+        background-image: url(../images/image_summer.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 65% 100%;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    height: (746/812) * 100%;
+    background-image: url(../images/image_summer2.png);
+    background-size: 100% 100%;
+    @include _375 {
+        background-image: none;
+        width: (680/1920) * 100%;
+        height: (840/1080) * 100%;
+    }
+}
